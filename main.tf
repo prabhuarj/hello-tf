@@ -32,3 +32,4 @@ resource "aws_subnet" "subnet3" {
       Name = "subnet-3"
     }
     vpc_id = "${aws_vpc.myvpc.id}"
+}
