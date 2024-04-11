@@ -24,3 +24,11 @@ resource "aws_subnet" "subnet2" {
     }
     vpc_id = "${aws_vpc.myvpc.id}"
 }
+
+resource "aws_subnet" "subnet3" {
+    cidr_block = "192.168.2.0/24"
+    availability_zone = "ap-southeast-2c"
+    tags = {
+      Name = "subnet-3"
+    }
+    vpc_id = "${aws_vpc.myvpc.id}"
