@@ -12,6 +12,6 @@ resource "aws_subnet" "subnet1"{
     vpc_id = "${aws_vpc.myvpc.id}"
     availability_zone = "ap-southeast-2a"
     tags = {
-        Name = "subnet-1"
+        Name = "subnetnew"
     }
 }
