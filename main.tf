@@ -6,3 +6,12 @@ resource "aws_vpc" "myvpc" {
         "Name" = "from-tf"
     }
 }
+
+resource "aws_subnet" "subnet1"{
+    cidr_block = "192.168.0.0/24"
+    vpc_id = "${aws_vpc.myvpc.id}"
+    availability_zone = "ap-southeast-2a"
+    tags = {
+        Name = "subnet-1"
+    }
+}
