@@ -1,8 +1,8 @@
 resource "aws_internet_gateway" "IGW" {
     vpc_id = "${aws_vpc.myvpc.id}"
     tags = {
-         Name = "from tf
-    }
+        Name = "from tf"
+    }  
 }
     
 resource "aws_route_table" "publicrt" {
