@@ -1,5 +1,5 @@
 resource "aws_vpc" "myvpc" {
-    cidr_block = "192.168.0.0/16"
+    cidr_block = var.myvpc-cidr
     instance_tenancy = "default"
 
     tags = {
@@ -8,7 +8,7 @@ resource "aws_vpc" "myvpc" {
 }
 
 resource "aws_subnet" "subnet1"{
-    cidr_block = "192.168.0.0/24"
+    cidr_block = var.subnet1cidr
     vpc_id = "${aws_vpc.myvpc.id}"
     availability_zone = "ap-southeast-2a"
     tags = {
@@ -17,7 +17,7 @@ resource "aws_subnet" "subnet1"{
 }
 
 resource "aws_subnet" "subnet2" {
-    cidr_block = "192.168.1.0/24"
+    cidr_block = var.subnet2cidr
     availability_zone = "ap-southeast-2b"
     tags = {
       Name = "subnet-2"
@@ -26,7 +26,7 @@ resource "aws_subnet" "subnet2" {
 }
 
 resource "aws_subnet" "subnet3" {
-    cidr_block = "192.168.2.0/24"
+    cidr_block = var.subnet3cidr
     availability_zone = "ap-southeast-2c"
     tags = {
       Name = "subnet-3"
