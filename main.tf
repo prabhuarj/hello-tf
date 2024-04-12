@@ -33,3 +33,12 @@ resource "aws_subnet" "subnet3" {
     }
     vpc_id = "${aws_vpc.myvpc.id}"
 }
+
+resource "aws_subnet" "subnet4" {
+    cidr_block = var.subnet4cidr
+    availability_zone = "ap-southeast-2c"
+    tags = {
+      Name = "subnet-4"
+    }
+    vpc_id = "${aws_vpc.myvpc.id}"
+}

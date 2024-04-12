@@ -34,3 +34,7 @@ variable "secretkey" {
     default = "192.168.0.0/16"
   }
 
+  variable "subnet4cidr" {
+    type = string
+    default = "192.168.3.0/34"
+  }
