@@ -18,9 +18,9 @@ output "subnet2id" {
 }
 
 output "subnet3id" {
-    value = "${aws_subnet.subnet3.id}
+    value = "${aws_subnet.subnet3.id}"
 }
 
 output "subnet4id" {
-    value = "${aws_subnet.subnet4.id}
+    value = "${aws_subnet.subnet4.id}"
 }
