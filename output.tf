@@ -3,7 +3,7 @@ output "vpcid" {
   
 }
 
-output "subnet1" {
+output "subnet1id" {
     value = "${aws_subnet.subnet1.id}"
   
 }
@@ -13,14 +13,14 @@ output "ignwid" {
   
 }
 
-output "subnet2" {
+output "subnet2id" {
     value = "${aws_subnet.subnet2.id}"
 }
 
-output "subnet3" {
+output "subnet3id" {
     value = "${aws_subnet.subnet3.id}
 }
 
-output "subnet4" {
+output "subnet4id" {
     value = "${aws_subnet.subnet4.id}
 }
