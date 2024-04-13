@@ -24,3 +24,7 @@ output "subnet3id" {
 output "subnet4id" {
     value = "${aws_subnet.subnet4.id}"
 }
+
+output "default-vpc" {
+     value ="${data.aws_vpc.default.id}"
+}
