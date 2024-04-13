@@ -52,5 +52,6 @@ resource "aws_subnet" "extra" {
     vpc_id = "${data.aws_vpc.default.id}"
     tags = {
       Name = "subnet-5"
+    }
 }
 
