@@ -42,3 +42,13 @@ resource "aws_subnet" "subnet4" {
     }
     vpc_id = "${aws_vpc.myvpc.id}"
 }
+
+data "aws_vpc" "default" {
+    default = true
+}
+
+resource "aws_subnet" "extra" {
+    cidr_block = "172.31.48.0/20"
+    vpc_id = "${data.aws_vpc.default.id}"
+}
+
