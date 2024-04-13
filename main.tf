@@ -50,5 +50,7 @@ data "aws_vpc" "default" {
 resource "aws_subnet" "extra" {
     cidr_block = "172.31.48.0/20"
     vpc_id = "${data.aws_vpc.default.id}"
+    tags = {
+      Name = "subnet-5"
 }
 
